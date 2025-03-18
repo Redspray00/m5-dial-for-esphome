@@ -33,7 +33,7 @@ namespace esphome
                     
                     gfx->startWrite();                      // Secure SPI bus
 
-                    gfx->fillRect(0, 0, width, this->getDisplayPositionY(currentValue) , GRAY);
+                    gfx->fillRect(0, 0, width, this->getDisplayPositionY(currentValue) , GREY);
                     gfx->fillRect(0, this->getDisplayPositionY(currentValue), width, height, GREEN);
 
                     display.setFontsize(3);
