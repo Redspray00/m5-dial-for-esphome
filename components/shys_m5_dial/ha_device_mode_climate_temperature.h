@@ -33,10 +33,10 @@ namespace esphome
                     
                     gfx->startWrite();                      // Secure SPI bus
 
-                    //gfx->fillRect(0, 0, width, this->getDisplayPositionY(currentValue) , RED);
-                    //gfx->fillRect(0, this->getDisplayPositionY(currentValue), width, height, YELLOW);
-                    gfx->fillRect(0, 0, width, this->getDisplayPositionY(currentValue), 0x07E0);  // Green
-                    gfx->fillRect(0, this->getDisplayPositionY(currentValue), width, height, 0x001F);  // Blue
+                    gfx->fillRect(0, 0, width, this->getDisplayPositionY(currentValue) , ORANGE);
+                    gfx->fillRect(0, this->getDisplayPositionY(currentValue), width, height, YELLOW);
+                    //gfx->fillRect(0, 0, width, this->getDisplayPositionY(currentValue), 0x07E0);  // Green
+                    //gfx->fillRect(0, this->getDisplayPositionY(currentValue), width, height, 0x001F);  // Blue
 
                     display.setFontsize(3);
                     gfx->drawString(String(currentValue).c_str(),
@@ -56,7 +56,7 @@ namespace esphome
 
             public:
                 HaDeviceModeClimateTemperature(HaDevice& device) : HaDeviceMode(device){
-                    this->maxValue = 40;
+                    this->maxValue = 80;
                 }
 
                 void refreshDisplay(M5DialDisplay& display, bool init) override {
